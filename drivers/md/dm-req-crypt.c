@@ -772,22 +772,23 @@ static void req_crypt_dtr(struct dm_target *ti)
 	if (dev)
 		dm_put_device(ti, dev);
 
-	if (req_crypt_queue) {
-		destroy_workqueue(req_crypt_queue);
-		req_crypt_queue = NULL;
+	if (req_page_pool) {
+		mempool_destroy(req_page_pool);
+		req_page_pool = NULL;
 	}
 	if (req_io_pool) {
 		mempool_destroy(req_io_pool);
 		req_io_pool = NULL;
 	}
-	if (req_page_pool) {
-		mempool_destroy(req_page_pool);
-		req_page_pool = NULL;
-	}
 	if (tfm) {
 		crypto_free_ablkcipher(tfm);
 		tfm = NULL;
 	}
+	if (req_crypt_queue) {
+		destroy_workqueue(req_crypt_queue);
+		req_crypt_queue = NULL;
+	}
+	dm_put_device(ti, dev);
 }
 
 
@@ -891,24 +892,8 @@ static int req_crypt_ctr(struct dm_target *ti, unsigned int argc, char **argv)
 	}
 	err = 0;
 ctr_exit:
-	if (err != 0) {
-		if (req_crypt_queue) {
-			destroy_workqueue(req_crypt_queue);
-			req_crypt_queue = NULL;
-		}
-		if (req_io_pool) {
-			mempool_destroy(req_io_pool);
-			req_io_pool = NULL;
-		}
-		if (req_page_pool) {
-			mempool_destroy(req_page_pool);
-			req_page_pool = NULL;
-		}
-		if (tfm) {
-			crypto_free_ablkcipher(tfm);
-			tfm = NULL;
-		}
-	}
+	if (err)
+		req_crypt_dtr(ti);
 	return err;
 }
 
