@@ -1720,7 +1720,8 @@ try_to_wake_up(struct task_struct *p, unsigned int state, int wake_flags)
 stat:
 	ttwu_stat(p, cpu, wake_flags);
 
-	if (src_cpu != cpu && task_notify_on_migrate(p))
+	/* if (src_cpu != cpu && task_notify_on_migrate(p)) */
+	if (task_notify_on_migrate(p))
 		notify = 1;
 out:
 	raw_spin_unlock_irqrestore(&p->pi_lock, flags);
