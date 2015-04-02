@@ -425,3 +425,4 @@ obj-$(CONFIG_AUTOSMP) += autosmp.o
 
 obj-$(CONFIG_PANTECH_ERR_CRASH_LOGGING) += pantech_restart.o pantech_sys.o pantech_apanic.o pantech_debug.o
 obj-$(CONFIG_PANTECH_MEM_LEAK_TRACE) += pantech_memlog.o
+obj-$(CONFIG_MSM_LIMITER) += msm_limiter.o
