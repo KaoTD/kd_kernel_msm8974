@@ -1660,8 +1660,10 @@ static int ssrestart_check(void)
 								__func__);
 	in_global_reset = 1;
 	ret = subsystem_restart("modem");
-	if (ret == -ENODEV)
-		panic("modem subsystem restart failed\n");
+	if (ret == -ENODEV) {
+		DMUX_LOG_KERR("%s: modem subsystem restart failed\n", __func__);
+		dump_stack();
+	}
 	return 1;
 }
 
