@@ -15,6 +15,22 @@
 #include <linux/seq_file.h>
 #include <linux/debugfs.h>
 #include <trace/events/power.h>
+#include <linux/moduleparam.h>
+
+static bool enable_si_ws = false;
+module_param(enable_si_ws, bool, 0644);
+static bool enable_wlan_rx_wake_ws = false;
+module_param(enable_wlan_rx_wake_ws, bool, 0644);
+static bool enable_wlan_ctrl_wake_ws = false;
+module_param(enable_wlan_ctrl_wake_ws, bool, 0644);
+static bool enable_wlan_wake_ws = false;
+module_param(enable_wlan_wake_ws, bool, 0644);
+static bool enable_bluedroid_timer_ws = false;
+module_param(enable_bluedroid_timer_ws, bool, 0644);
+static bool enable_bluesleep_ws = false;
+module_param(enable_bluesleep_ws, bool, 0644);
+static bool enable_msm_hsic_ws = false;
+module_param(enable_msm_hsic_ws, bool, 0644);
 
 #include "power.h"
 
