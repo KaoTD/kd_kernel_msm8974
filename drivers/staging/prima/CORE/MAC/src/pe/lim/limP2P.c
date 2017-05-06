@@ -1176,7 +1176,9 @@ void limSendP2PActionFrame(tpAniSirGlobal pMac, tpSirMsgQ pMsg)
      */
     if ((SIR_MAC_MGMT_ACTION == pFc->subType) &&
         psessionEntry->limRmfEnabled && (!limIsGroupAddr(pMacHdr->da)) &&
-        lim_is_robust_mgmt_action_frame(pActionHdr->category)) {
+
+        lim_is_robust_mgmt_action_frame(pActionHdr->category))
+    {
         /* All psession checks are already done at start */
         limSetProtectedBit(pMac, psessionEntry, pMacHdr->da, pMacHdr);
 

@@ -9207,7 +9207,6 @@ eHalStatus sme_SetMaxTxPowerPerBand(eCsrBand band, v_S7_t dB,
     eHalStatus status;
     tSmeCmd *set_max_tx_pwr_per_band;
     tpAniSirGlobal mac_ctx = PMAC_STRUCT(hal);
-
    smsLog(mac_ctx, LOG1,
           FL("band : %d power %d dB"),
           band, dB);
