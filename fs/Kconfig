@@ -14,6 +14,12 @@ source "fs/ext2/Kconfig"
 source "fs/ext3/Kconfig"
 source "fs/ext4/Kconfig"
 
+config DYNAMIC_FSYNC
+	bool "dynamic file sync control"
+	default n
+	help
+	  An experimental file sync control using Android's early suspend / late resume drivers
+
 config FS_XIP
 # execute in place
 	bool
