@@ -25,7 +25,7 @@
 #include "mdss.h"
 #include "mdss_panel.h"
 #include "mdss_dsi.h"
-#include "mdss_debug.h"
+#include "mdss_debug.h"z
 #ifdef CONFIG_F_SKYDISP_SILENT_BOOT	 //seunghwa_Ji p13832 	
 #include <mach/pantech_sys.h>
 #endif
