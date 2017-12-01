@@ -6,8 +6,7 @@
 ###############################################################################
 
 export ARCH=arm
-export PATH=/home/chautruongthinh/cm13/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin:$PATH
-export CROSS_COMPILE=arm-linux-androideabi-
+export CROSS_COMPILE=./arm-eabi-4.7/bin/arm-eabi-
 
 
 make mrproper

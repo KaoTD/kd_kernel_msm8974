@@ -10,7 +10,7 @@
 ##############################################################################
 
 export ARCH=arm
-export PATH=/home/kaotd/arm-eabi-4.7/bin:$PATH
+export PATH=./arm-eabi-4.7/bin:$PATH
 export CROSS_COMPILE=arm-eabi-
 
 ##############################################################################
