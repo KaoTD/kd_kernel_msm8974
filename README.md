@@ -1,6 +1,6 @@
-# KD Kernel for VEGA IM-A880/A890/A900
+# KD Kernel for VEGA IM-A880/A890/A900/A910
 
-A custom kernel developed by KaoTD, supported for VEGA IM-A880/A890/A900
+A custom kernel developed by KaoTD, supported for VEGA IM-A880/A890/A900/A910
 
 ### Building
 
@@ -81,6 +81,7 @@ Thanks to all my friend, testers, and special:
 * [Chau Truong Thinh](http://github.com/chautruongthinh)
 * [Nguyen Ly Hoa](http://github.com/hoalamha)
 * [Nguyen Sang](http://github.com/renosang)
-* DroidVN Team
+* [DroidVN Team](http://droidvn.com)
+* [Myself](http://fb.com/kaotd)
 
 
