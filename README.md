@@ -77,9 +77,10 @@ Then flash using custom recovery ! Goodluck !
 ### Credit
 
 Thanks to all my friend, testers, and special:
-```
+
 * [Chau Truong Thinh](http://github.com/chautruongthinh)
 * [Nguyen Ly Hoa](http://github.com/hoalamha)
 * [Nguyen Sang](http://github.com/renosang)
 * DroidVN Team
-```
+
+
