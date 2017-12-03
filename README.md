@@ -27,7 +27,7 @@ Export toolchain:
 export ARCH=arm
 export CROSS_COMPILE=./arm-eabi-4.*/bin/arm-eabi-
 ```
-* : 7 or 8, default 8. If you want LEDs work, use gcc-4.7 and make sure to revert this commit "bf1bb0377e352e8b5db32458a159cd38ca4ee94e". By compiling using gcc-4.7, this will decrease the kernel performance.
+NOTE: "*" : 7 or 8, default 8. If you want LEDs work, use gcc-4.7 and make sure to revert this commit "bf1bb0377e352e8b5db32458a159cd38ca4ee94e". By compiling using gcc-4.7, this will decrease the kernel performance.
 By using gcc-4.8, LEDs driver will not working because incompatible driver. And with this, you got better performance and smoothly work.
 
 
@@ -68,7 +68,7 @@ cd ./arm-eabi-4.*/bin
 cp -f scsi_wait_scan.ko ../../
 cp -f wlan.ko ../../
 ```
-* : depends on your choice bellow
+NOTE: "*" : depends on your choice above
 
 Now you got: 'zImage', 'dt.img', 'scsi_wait_scan.ko', 'wlan.ko'(if you compiled with mm_defconfig)
 
