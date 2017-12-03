@@ -10,6 +10,12 @@ sudo apt-get update && sudo apt-get install git-core gnupg flex bison gperf libs
 ```
 
 
+Cloning kernel source:
+```
+git clone http://github.com/KaoTD/kd_kernel_msm8974
+```
+
+
 Enter the directory:
 ```
 cd kd_kernel_msm8974
