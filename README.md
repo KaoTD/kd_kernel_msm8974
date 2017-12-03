@@ -74,7 +74,7 @@ Now you got: 'zImage', 'dt.img', 'scsi_wait_scan.ko', 'wlan.ko'(if you compiled 
 
 ### Installing
 
-Download this template zip: * [KD-Kernel_VEGA.zip](https://github.com/KaoTD/kd_kernel_msm8974/blob/master/KD-Kernel_VEGA.zip?raw=true)
+Download this template zip: * [kdk-vega.zip](https://github.com/KaoTD/kd_kernel_msm8974/blob/master/kdk-vega.zip?raw=true)
 
 Put zImage & dt.img in root of the zip, put scsi_wait_scan.ko & wlan.ko in system/lib/modules folder of the zip.
 
