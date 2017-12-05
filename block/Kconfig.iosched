@@ -118,6 +118,8 @@ config IOSCHED_TRIPNDROID
 	---help---
 	  The Trip N Droid scheduler
 
+choice
+
 	prompt "Default I/O scheduler"
 	default DEFAULT_CFQ
 	help
