@@ -15,7 +15,6 @@ obj-$(CONFIG_CPU_FREQ_GOV_ZZMOOVE)	+= cpufreq_zzmoove.o
 obj-$(CONFIG_CPU_FREQ_GOV_SLIM)			+= cpufreq_slim.o
 obj-$(CONFIG_CPU_FREQ_GOV_SMARTMAX_EPS) += cpufreq_smartmax_eps.o
 obj-$(CONFIG_CPU_FREQ_GOV_SLIM)		+= cpufreq_slim.o
-obj-$(CONFIG_CPU_FREQ_GOV_INTERACTIVE)	+= cpufreq_interactive_pro.o
 obj-$(CONFIG_CPU_FREQ_GOV_SMARTMAX)     += cpufreq_smartmax.o
 
 # CPUfreq cross-arch helpers
