@@ -10,22 +10,17 @@
 ##############################################################################
 
 export ARCH=arm
-export PATH=./arm-eabi-4.7/bin:$PATH
+export PATH=~/arm-eabi-4.8/bin:$PATH
 export CROSS_COMPILE=arm-eabi-
 
 ##############################################################################
 # make zImage
 ##############################################################################
-mkdir -p ./obj/KERNEL_OBJ/
-make O=./obj/KERNEL_OBJ/ ef59_defconfig
-make -j8 CONFIG_NO_ERROR_ON_MISMATCH=y O=./obj/KERNEL_OBJ/ 2>&1
-
-make CONFIG_NO_ERROR_ON_MISMATCH=y
-
-arm-eabi-strip -g wlan.ko
+make ef59_defconfig
+make -j8
 
 ##############################################################################
 # Make dt.img & copy zImage
 ##############################################################################
-# ./mkdt.sh
+./mkdt.sh
 
