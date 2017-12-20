@@ -74,6 +74,7 @@ struct snd_timer_user {
 	wait_queue_head_t qchange_sleep;
 	struct fasync_struct *fasync;
 	struct mutex tread_sem;
+	struct mutex ioctl_lock;
 };
 
 /* list of timers */
