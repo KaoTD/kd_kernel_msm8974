@@ -41,8 +41,6 @@
 #include "msm_isp_util.h"
 #include "msm_camera_io_util.h"
 #include <linux/debugfs.h>
-#include <linux/ratelimit.h>
-
 
 #define MSM_CPP_DRV_NAME "msm_cpp"
 
@@ -1447,11 +1445,11 @@ long msm_cpp_subdev_ioctl(struct v4l2_subdev *sd,
 	int rc = 0;
 
 	if (ioctl_ptr == NULL) {
-		pr_err_ratelimited("ioctl_ptr is null\n");
+		pr_err("ioctl_ptr is null\n");
 		return -EINVAL;
 	}
 	if (cpp_dev == NULL) {
-		pr_err_ratelimited("cpp_dev is null\n");
+		pr_err("cpp_dev is null\n");
 		return -EINVAL;
 	}
 	mutex_lock(&cpp_dev->mutex);
